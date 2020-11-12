@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.Button?>
+<HBox id="HBox" prefHeight="800" prefWidth="1600" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller">
+    <children>
+        <Accordion fx:id="accordion">
+            <panes>
+                <TitledPane id="titledPaneHair" text="Hair">
+                    <content>
+                        <GridPane alignment="TOP_CENTER">
+                            <children>
+                                <ImageView id="curlyHair" GridPane.columnIndex="0" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleCurlyHair">
+                                    <image>
+                                        <Image url="@resources/hair/hair_curly.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="longHair" GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleLongHair">
+                                    <image>
+                                        <Image url="@resources/hair/hair_long.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="shortHair" GridPane.columnIndex="1" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleShortHair">
+                                    <image>
+                                        <Image url="@resources/hair/hair_short.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="wavyHair" GridPane.columnIndex="1" GridPane.rowIndex="1" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleWavyHair">
+                                    <image>
+                                        <Image url="@resources/hair/hair_wavy.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+                <TitledPane id="titledPaneSkin" text="Skin">
+                    <content>
+                        <GridPane alignment="TOP_CENTER">
+                            <children>
+                                <ImageView id="brownSkin" GridPane.columnIndex="0" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleBrownSkin">
+                                    <image>
+                                        <Image url="@resources/skin/skin_brown.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="lightSkin" GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleLightSkin">
+                                    <image>
+                                        <Image url="@resources/skin/skin_light.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="lighterSkin" GridPane.columnIndex="1" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleLighterSkin">
+                                    <image>
+                                        <Image url="@resources/skin/skin_lighter.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+                <TitledPane id="titledPaneEyebrows" text="Eyebrows">
+                    <content>
+                        <GridPane alignment="TOP_CENTER">
+                            <children>
+                                <ImageView id="angryBrows" GridPane.columnIndex="0" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleAngryBrows">
+                                    <image>
+                                        <Image url="@resources/brows/brows_angry.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="defaultBrows" GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleDefaultBrows">
+                                    <image>
+                                        <Image url="@resources/brows/brows_default.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="sadBrows" GridPane.columnIndex="1" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleSadBrows">
+                                    <image>
+                                        <Image url="@resources/brows/brows_sad.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+                <TitledPane id="titledPaneEyes" text="Eyes">
+                    <content>
+                        <GridPane alignment="TOP_CENTER">
+                            <children>
+                                <ImageView id="closedEyes" GridPane.columnIndex="0" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleClosedEyes">
+                                    <image>
+                                        <Image url="@resources/eyes/eyes_closed.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="defaultEyes" GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleDefaultEyes">
+                                    <image>
+                                        <Image url="@resources/eyes/eyes_default.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="wideEyes" GridPane.columnIndex="1" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleWideEyes">
+                                    <image>
+                                        <Image url="@resources/eyes/eyes_wide.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+                <TitledPane id="titledPaneMouth" text="Mouth">
+                    <content>
+                        <GridPane alignment="TOP_CENTER">
+                            <children>
+                                <ImageView id="defaultMouth" GridPane.columnIndex="0" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleDefaultMouth">
+                                    <image>
+                                        <Image url="@resources/mouth/mouth_default.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="sadMouth" GridPane.columnIndex="0" GridPane.rowIndex="1" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleSadMouth">
+                                    <image>
+                                        <Image url="@resources/mouth/mouth_sad.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView id="seriousMouth" GridPane.columnIndex="1" GridPane.rowIndex="0" fitWidth="150" fitHeight="150" pickOnBounds="true" onMouseClicked="#handleSeriousMouth">
+                                    <image>
+                                        <Image url="@resources/mouth/mouth_serious.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+        <Pane fx:id="avatarView" prefWidth="700" onMouseClicked="#handleBubblingPhaseClick" prefHeight="800">
+            <children>
+                <Rectangle fx:id="background" width="200" height="200" fill="white" layoutX="150" layoutY="300" onMouseClicked="#handleBackgroundSelected"/>
+                <ImageView fx:id="skin" fitWidth="200" fitHeight="200" layoutY="300"/>
+                <ImageView fx:id="eyebrows" fitWidth="200" fitHeight="200" layoutX="150" layoutY="300" onMouseClicked="#handleEyebrowsSelected"/>
+                <ImageView fx:id="eyes" fitWidth="200" fitHeight="200" layoutX="150" layoutY="300" onMouseClicked="#handleEyesSelected"/>
+                <ImageView fx:id="nose" fitWidth="200" fitHeight="200" layoutX="150" layoutY="300">
+                    <image>
+                        <Image url="@resources/nose_default.png"/>
+                    </image>
+                </ImageView>
+                <ImageView fx:id="mouth" fitWidth="200" fitHeight="200" layoutX="150" layoutY="300"/>
+                <Group fx:id="hair" layoutX="150" layoutY="300"></Group>
+                <Group fx:id="clothes" layoutX="150" layoutY="300"></Group>
+            </children>
+        </Pane>
+        <Pane fx:id="commandBar" prefWidth="500" prefHeight="800">
+            <children>
+                <Button fx:id="save" layoutX="80" layoutY="500" text="save"/>
+            </children>
+        </Pane>
+    </children>
+</HBox>
